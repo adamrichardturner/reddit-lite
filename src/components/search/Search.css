@@ -1,0 +1,12 @@
+div.searchBar {
+    padding: 10px;
+}
+
+input {
+    background: whitesmoke !important;
+}
+
+.MuiFilledInput-root::before {
+    border-bottom: none !important;
+    transition: none !important;
+}

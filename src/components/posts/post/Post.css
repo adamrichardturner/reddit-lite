@@ -1,0 +1,46 @@
+article.post {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 5% 0% 0;
+}
+
+div.post-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+}
+
+div.post-top h2 {
+    text-align: left;
+    flex-basis: 75%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+div.likes {
+    flex-direction: column;
+    margin: 20px;
+}
+
+div.post-middle {
+    display: flex;
+    padding: 0;
+    width: 75%;
+}
+
+div.post-bottom {
+    border-top: 1.5px solid black;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 75%;
+}
+
+div.post-bottom p {
+}

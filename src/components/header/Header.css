@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+}
+
+img#logo {
+    padding: 10px;
+}
+
+h1 {
+    font-family: Roboto, sans-serif;  
+    color: black;
+}
+
+div.topicsDropdown {
+    display: none;
+}
+
+@media only screen and (max-width: 558px) {
+    header {
+        flex-direction: column;
+    }
+    h1 {
+        margin: 0px;
+    }
+    div.topicsDropdown {
+        display: inline;
+    }
+}

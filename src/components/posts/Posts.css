@@ -1,0 +1,13 @@
+section.posts {
+    background: black;
+    color: black;
+    width: 66%;
+    padding: 20px;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 558px) {
+    section.posts {
+        width: 90%;
+    }
+}

@@ -1,0 +1,29 @@
+section.sideBar {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 34%;
+    color: white;
+}
+
+section.sideBar h2 {
+    color: white;
+}
+
+section.sideBar ul {
+    margin: 0 !important;
+    list-style: none;
+    list-style-position: inside;
+    padding-inline-start: 0px;
+}
+
+section.sideBar li {
+    height: 40px;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+section.sideBar li:hover {
+    background: orangered;
+    color: white;
+}
