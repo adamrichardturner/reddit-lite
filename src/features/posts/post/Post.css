@@ -4,7 +4,7 @@ article.post {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin: 0 5% 0% 0;
+    margin: 0 5% 2% 0;
 }
 
 div.post-top {
@@ -47,4 +47,16 @@ div.post-bottom {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 75%;
+}
+
+@media only screen and (max-width: 1000px) {
+    article.post {
+        margin: 0 0 5% 0;
+        width: 100%;
+        padding: 0;
+    }
+    section.posts {
+        padding: 0px;
+        margin: 0 !important;
+    }
 }

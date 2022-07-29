@@ -2,7 +2,7 @@ section.sideBar {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    width: 34%;
+    width: 20%;
     color: white;
 }
 

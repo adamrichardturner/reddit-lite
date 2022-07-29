@@ -3,12 +3,16 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { updateActiveTopic } from '../topics/topicsSlice';
 
 export const TopicsDropdown = () => {
+  const dispatch = useDispatch();
   const [age, setAge] = React.useState('');
-
+  const topics = useSelector(state => state.topics.topics);
   const handleChange = (event) => {
-    setAge(event.target.value);
+    dispatch(updateActiveTopic(event.target.value))
   };
 
   return (
@@ -26,9 +30,9 @@ export const TopicsDropdown = () => {
           <MenuItem value="">
             <em>Topics</em>
           </MenuItem>
-          <MenuItem value={10}>Twenty</MenuItem>
-          <MenuItem value={21}>Twenty one</MenuItem>
-          <MenuItem value={22}>Twenty one and a half</MenuItem>
+          {topics.map(topic => {
+            return <MenuItem value={topic.url}>{topic.name}</MenuItem>
+          })}
         </Select>
       </FormControl>
     </div>
