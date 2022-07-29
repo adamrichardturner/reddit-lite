@@ -5,6 +5,7 @@ export const fetchPostsByTopic = createAsyncThunk(
     'posts/updatePosts',
     async (topic, thunkAPI) => {
       const response = await getPosts(topic);
+      console.log(response)
       return response;
     }
 )

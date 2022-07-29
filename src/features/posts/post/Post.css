@@ -25,12 +25,18 @@ div.post-top h2 {
 div.likes {
     flex-direction: column;
     margin: 20px;
+    text-align: center;
 }
 
 div.post-middle {
     display: flex;
     padding: 0;
     width: 75%;
+}
+
+div.post-middle img {
+    width: 75%;
+    height: auto;
 }
 
 div.post-bottom {
@@ -40,7 +46,4 @@ div.post-bottom {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 75%;
-}
-
-div.post-bottom p {
 }

@@ -1,21 +1,18 @@
 import { Likes } from '../likes/Likes';
 import Styles from './Post.css';
 
-export const Post = () => {
+export const Post = ({title, content, author, time, likes, media}) => {
     return (
             <article className="post" style={Styles}>
                 <div className="post-top">
-                    <Likes />
-                    <h2>Post title is quite long so I've written it here</h2>
+                    <Likes likes={likes}/>
+                    <h2>{title}</h2>
                 </div>
                 <div className="post-middle">
-                    <p>Content goes here tralallalaa Content goes here tralallalaa
-                    Content goes here tralallalaa Content goes here tralallalaa
-                    Content goes here tralallalaa Content goes here tralallalaa
-                    </p>
+                    {media ? <img src={media} alt=""/> : <p>{content}</p>}
                 </div>
                 <div className="post-bottom">
-                    <p>Author</p>
+                    <p>{author}</p>
                     <p>Post Time</p>
                     <p>11</p>
                 </div>

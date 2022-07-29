@@ -4,18 +4,20 @@ import { useSelector } from 'react-redux';
 import { LoadingProgress } from '../loadingProgress/LoadingProgress';
 
 export const Posts = ({posts}) => {
+    let loading = useSelector(state => state.post.isLoading);
+    let postList = !loading && Object.values(posts).map(post => {
+        return (<Post 
+                key={post.id}
+                title={post.title}
+                author={post.author}
+                content={post.selftext}
+                likes={post.ups}
+                media={post.url}
+               />)
+    })
     return (
-        <Post />
-    )
-    // let loading = useSelector(state => state.post.isLoading);
-    // let postList = !loading && posts.map(post => {
-    //     return (
-    //         <Post />
-    //     )
-    // });
-    // return (
-    //         <section className="posts" style={Styles}>
-    //             {loading ? <LoadingProgress /> : postList}
-    //         </section>
-    // );
+            <section className="posts" style={Styles}>
+                {loading ? <p>Loading</p> : postList}
+            </section>
+    );
 };

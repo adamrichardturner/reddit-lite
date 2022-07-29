@@ -1,29 +1,30 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
-import { createAsyncThunk } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from '../features/header/Header';
 import { PostsContainer } from '../containers/PostsContainer';
 import { IndividualPost } from '../features/posts/individualPost/IndividualPost';
 import { Sidebar } from '../features/sidebar/Sidebar';
-import { getTopics } from '../util/Reddit';
-import { getPosts } from '../util/Reddit';
-import { updatePosts } from '../features/posts/postsSlice';
 import { fetchPostsByTopic } from '../features/posts/postsSlice';
+
 const App = () => {
   const activeTopic = useSelector(state => state.topics.activeTopic)
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPostsByTopic(activeTopic))
+    const data = fetchPostsByTopic(activeTopic)
+    if(data) {
+      dispatch(data);
+    }
   }, [activeTopic]);
 
-  const posts = useSelector(state => state.posts);
-  console.log(posts)
+
+  const posts = useSelector(state => state.posts.posts[0]);
+
   return (
     <Router>
       <div className="App">
