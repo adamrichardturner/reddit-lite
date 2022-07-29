@@ -37,6 +37,7 @@ div.post-middle {
 div.post-middle img {
     width: 75%;
     height: auto;
+    margin-bottom: 15px;
 }
 
 div.post-bottom {

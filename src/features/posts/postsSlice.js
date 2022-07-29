@@ -4,8 +4,7 @@ import { getPosts } from '../../util/Reddit';
 export const fetchPostsByTopic = createAsyncThunk(
     'posts/updatePosts',
     async (topic, thunkAPI) => {
-      const response = await getPosts(topic);
-      console.log(response)
+      const response = getPosts(topic);
       return response;
     }
 )
@@ -14,7 +13,7 @@ const postsSlice = createSlice({
     name: "posts",
     initialState: {
         posts: [],
-        isLoading: false,
+        isLoading: true,
         hasError: false
     },
     reducers: {
@@ -39,3 +38,4 @@ const postsSlice = createSlice({
 
 export default postsSlice.reducer;
 export const { updatePosts } = postsSlice.actions;
+console.log(updatePosts())

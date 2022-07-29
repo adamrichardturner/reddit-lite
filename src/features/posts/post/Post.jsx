@@ -9,7 +9,8 @@ export const Post = ({title, content, author, time, likes, media}) => {
                     <h2>{title}</h2>
                 </div>
                 <div className="post-middle">
-                    {media ? <img src={media} alt=""/> : <p>{content}</p>}
+                    <img src={media} alt=""/>
+                    <p>{content}</p>
                 </div>
                 <div className="post-bottom">
                     <p>{author}</p>

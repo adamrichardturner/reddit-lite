@@ -10,6 +10,7 @@ import { PostsContainer } from '../containers/PostsContainer';
 import { IndividualPost } from '../features/posts/individualPost/IndividualPost';
 import { Sidebar } from '../features/sidebar/Sidebar';
 import { fetchPostsByTopic } from '../features/posts/postsSlice';
+import { updatePosts } from '../features/posts/postsSlice';
 
 const App = () => {
   const activeTopic = useSelector(state => state.topics.activeTopic)
@@ -20,10 +21,10 @@ const App = () => {
     if(data) {
       dispatch(data);
     }
-  }, [activeTopic]);
+  }, [activeTopic, dispatch]);
 
 
-  const posts = useSelector(state => state.posts.posts[0]);
+  const posts = useSelector(state => state.posts.posts[0])
 
   return (
     <Router>

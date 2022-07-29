@@ -1,10 +1,11 @@
 import { Post } from './post/Post';
 import Styles from './Posts.css';
 import { useSelector } from 'react-redux';
-import { LoadingProgress } from '../loadingProgress/LoadingProgress';
+import loadingGif from '../loadingProgress/loading.gif';
 
 export const Posts = ({posts}) => {
-    let loading = useSelector(state => state.post.isLoading);
+    let loading = useSelector(state => state.posts.isLoading);
+
     let postList = !loading && Object.values(posts).map(post => {
         return (<Post 
                 key={post.id}
@@ -17,7 +18,7 @@ export const Posts = ({posts}) => {
     })
     return (
             <section className="posts" style={Styles}>
-                {loading ? <p>Loading</p> : postList}
+                {loading ? <img src={loadingGif} alt="Loading app" height="100" id="loadingGif" /> : postList}
             </section>
     );
 };

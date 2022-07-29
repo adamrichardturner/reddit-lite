@@ -6,6 +6,11 @@ section.posts {
     margin: 20px;
 }
 
+img#loadingGif {
+    display: block;
+    margin: 50% auto;
+}
+
 @media only screen and (max-width: 558px) {
     section.posts {
         width: 90%;

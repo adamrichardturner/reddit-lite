@@ -4,7 +4,7 @@ const topicsSlice = createSlice({
     name: "topics",
     initialState: {
         topics: [],
-        activeTopic: "/r/Home/"
+        activeTopic: "/r/popular/"
     },
     reducers: {
         addTopic: (state, action) => {

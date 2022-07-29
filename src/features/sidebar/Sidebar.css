@@ -21,6 +21,8 @@ section.sideBar li {
     height: 40px;
     padding-left: 0 !important;
     margin-left: 0 !important;
+    color: white;
+    text-decoration: none;
 }
 
 section.sideBar li:hover {
