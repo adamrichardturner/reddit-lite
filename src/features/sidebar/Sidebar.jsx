@@ -30,7 +30,7 @@ export const Sidebar = () => {
                         <Link to="/" key={topic.id}>
                             <li
                                 onClick={() => dispatch(updateActiveTopic(topic.url))}
-                                className={activeTopic === topic.url ? Styles.activeTopic : undefined}
+                                className={activeTopic === topic.url ? 'activeTopic' : undefined}
                             >
                                 <img src={topic.icon} alt="" height="25" onError={(e) => e.target.src = redditLogo} />
                                 {topic.name}

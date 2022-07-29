@@ -22,10 +22,14 @@ section.sideBar li {
     padding-left: 0 !important;
     margin-left: 0 !important;
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 section.sideBar li:hover {
     background: orangered;
     color: white;
+}
+
+.activeTopic {
+    background: orangered !important;
 }

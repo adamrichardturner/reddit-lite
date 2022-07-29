@@ -27,7 +27,7 @@ const postsSlice = createSlice({
         [fetchPostsByTopic.fulfilled]: (state, action) => {
             state.isLoading = false;
             state.hasError = false;
-            state.posts.push(action.payload)
+            state.posts = action.payload;
         },
         [fetchPostsByTopic.rejected]: (state, action) => {
             state.isLoading = false;
@@ -38,4 +38,3 @@ const postsSlice = createSlice({
 
 export default postsSlice.reducer;
 export const { updatePosts } = postsSlice.actions;
-console.log(updatePosts())
