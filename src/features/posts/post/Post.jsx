@@ -30,6 +30,7 @@ export const timePassed = ms => {
 };
 
 export const Post = ({title, content, author, time, likes, media, permalink, numComments}) => {
+
     const [commentsVisible, setCommentsVisible] = useState(false);
 
     const handleClick = event => {
@@ -40,7 +41,11 @@ export const Post = ({title, content, author, time, likes, media, permalink, num
             <article className="post" style={Styles}>
                 <div className="post-top">
                     <Likes likes={likes}/>
-                    <h2>{title}</h2>
+                    <a href={`https://reddit.com/${permalink}`} target="_blank" rel="noreferrer">
+                        <h2>
+                            {title}
+                        </h2>
+                    </a>
                 </div>
                 <div className="post-middle">
                     <img src={media} alt=""/>

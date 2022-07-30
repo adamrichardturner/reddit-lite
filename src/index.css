@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+a, a:active, a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 main {
   background: black;
   display: flex;

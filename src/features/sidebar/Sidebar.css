@@ -23,6 +23,8 @@ section.sideBar li {
     margin-left: 0 !important;
     color: white;
     text-decoration: none !important;
+    display: flex;
+    align-items: center;
 }
 
 section.sideBar li:hover {

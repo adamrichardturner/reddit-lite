@@ -25,7 +25,7 @@ const App = () => {
 
   // Store in posts our posts from state
   const posts = useSelector(state => state.posts.posts)
-  
+
   return (
     <Router>
       <div className="App">
