@@ -1,0 +1,22 @@
+div.commentsContainer {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.comment {
+    background: #d3d3d3;
+}
+
+div.commentsBody p {
+    padding: 15px;
+}
+
+div.commentsFooter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 1.5px solid black;
+    width: 75%;
+}

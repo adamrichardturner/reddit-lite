@@ -29,7 +29,7 @@ export const timePassed = ms => {
     }
 };
 
-export const Post = ({title, content, author, time, likes, media, permalink}) => {
+export const Post = ({title, content, author, time, likes, media, permalink, numComments}) => {
     const [commentsVisible, setCommentsVisible] = useState(false);
 
     const handleClick = event => {
@@ -44,21 +44,25 @@ export const Post = ({title, content, author, time, likes, media, permalink}) =>
                 </div>
                 <div className="post-middle">
                     <img src={media} alt=""/>
-                    <p>{content}</p>
+                    {content ? <p>{content}</p> : null}
                 </div>
                 <div className="post-bottom">
                     <p>{author}</p>
                     <p>{timePassed(time)}</p>
-                    <div className="comments">
-                        <p>12</p>
+                    <div className="comments" onClick={handleClick}>
+                        <p>{numComments}</p>
                         <ChatBubbleOutlineIcon 
-                            onClick={handleClick}
                         />
                     </div>
                 </div>
-                {commentsVisible && (<div class="comments">
-                    <Comments permalink={permalink}/>
-                </div>)}
+                {commentsVisible && (
+                <>
+                    <div class="comments">
+                        <Comments permalink={permalink}/>
+                    </div>
+                        <p onClick={handleClick}>Close comments...</p>
+                </>
+                )}
             </article>
     );
 };

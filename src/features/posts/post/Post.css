@@ -55,6 +55,7 @@ div.comments {
     display: flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -67,4 +68,13 @@ div.comments {
         padding: 0px;
         margin: 0 !important;
     }
+
+    div.post-middle img {
+        display: block;
+        width: 85%;
+        height: auto;
+        margin-bottom: 15px;
+        margin: 0 auto;
+    }
+
 }

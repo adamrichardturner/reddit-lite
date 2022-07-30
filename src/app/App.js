@@ -24,8 +24,6 @@ const App = () => {
 
 
   const posts = useSelector(state => state.posts.posts)
-
-  console.log(posts);
   
   return (
     <Router>

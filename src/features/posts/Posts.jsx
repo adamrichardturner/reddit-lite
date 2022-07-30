@@ -17,6 +17,7 @@ export const Posts = ({posts}) => {
                 media={post.url}
                 time={post.created_utc}
                 permalink={post.permalink}
+                numComments={post.num_comments}
                />)
     });
 
