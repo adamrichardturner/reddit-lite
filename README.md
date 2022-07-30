@@ -16,7 +16,7 @@ You can [view a demo of Reddit Lite here.](https://adamturner-reddit-lite.netlif
 
 ## Future Enhancements
 
-1. Individual post view - render the whole page as an individual post when the post is clicked in the intial view.
+1. Individual post view - render the whole page as an individual post when the post is clicked in the initial view.
 
 2. Testing with Jest and Enzyme - unit tests.
 
