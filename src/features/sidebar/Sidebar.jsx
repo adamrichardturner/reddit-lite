@@ -7,10 +7,13 @@ import { addTopic, updateActiveTopic } from '../topics/topicsSlice';
 import redditLogo from './reddit-logo.png';
 
 export const Sidebar = () => {
+    // Get activeTopic to change styling of actively selected sidebar item
     const activeTopic = useSelector(state => state.topics.activeTopic);
+    // Store in topics our topics in state
     const topics = useSelector(state => state.topics.topics);
     const dispatch = useDispatch();
 
+    // Render our topics and dispatch to state
     useEffect(() => getTopics().then(json => {
         json.forEach(item => dispatch(
             addTopic({
@@ -21,11 +24,12 @@ export const Sidebar = () => {
             })));
     }), [dispatch]);
 
+    // Iterate over topics drawn from state and render Link elements
     return (
         <>
             <section className="sideBar" style={Styles}>
             <h2>Topics</h2>
-                <ul>
+                <ul> 
                     {topics.map(topic => (
                         <Link to="/" key={topic.id}>
                             <li

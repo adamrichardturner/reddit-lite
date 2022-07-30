@@ -30,6 +30,8 @@ div.likes {
 
 div.post-middle {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.post-middle p {
@@ -76,5 +78,24 @@ div.comments {
         margin-bottom: 15px;
         margin: 0 auto;
     }
+}
 
+@media only screen and (max-width: 767px) {
+    div.post-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div.post-bottom p {
+        margin: 5px 0px;
+    }
+
+    div.post-top h2 {
+        font-size: 1rem;
+        flex-shrink: 1;
+    }
+
+    div.post-middle p {
+        padding: 5px;
+    }
 }

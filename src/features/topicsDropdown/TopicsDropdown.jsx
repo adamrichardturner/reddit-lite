@@ -9,7 +9,9 @@ import { updateActiveTopic } from '../topics/topicsSlice';
 
 export const TopicsDropdown = () => {
   const dispatch = useDispatch();
+  // Get topics from state
   const topics = useSelector(state => state.topics.topics);
+  // Change handler for the Select box
   const handleChange = (event) => {
     dispatch(updateActiveTopic(event.target.value))
   };

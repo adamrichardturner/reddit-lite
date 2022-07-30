@@ -26,7 +26,7 @@ export const Header = () => {
                                 height="50" 
                                 id="logo"
                             />
-                            <h1>Reddit Lite</h1>
+                            <h1>Reddit<span style={{color: 'orangered'}}> Lite</span></h1>
                     </div>
                 </Link>
                 <div className="searchBar">

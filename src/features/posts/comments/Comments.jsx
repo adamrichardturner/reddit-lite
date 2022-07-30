@@ -6,7 +6,7 @@ import { timePassed } from '../post/Post';
 
 export const Comments = ({permalink}) => {
     const [comments, setComments] = useState([]);
-
+    // getPostComments and add to state
     useEffect(() => {
         getPostComments(permalink).then(jsonComments => setComments(...comments, jsonComments));
     }, [permalink]);
@@ -14,7 +14,7 @@ export const Comments = ({permalink}) => {
     return (
         <div className="commentsContainer" style={Styles}>
             <h2>Comments</h2>
-            {
+            { // Iterate over comments and render comment elements
                 Object.values(comments).map(comment => (
                     <>
                         <div className="commentsBody">
