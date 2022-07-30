@@ -24,6 +24,8 @@ You can [view a demo of Reddit Lite here.](https://adamturner-reddit-lite.netlif
 
 4. Add functionality to the up or down vote icons.
 
+5. Include GIF, video and gallery carousel type media. Some posts show no content as these file types are unhandled.
+
 ## Available Scripts
 
 In the project directory, you can run:
