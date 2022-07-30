@@ -30,6 +30,10 @@ section.sideBar li:hover {
     color: white;
 }
 
+section.sideBar img {
+    border-radius: 50px;
+}
+
 .activeTopic {
     background: orangered !important;
 }

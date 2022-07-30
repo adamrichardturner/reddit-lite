@@ -9,7 +9,6 @@ import { updateActiveTopic } from '../topics/topicsSlice';
 
 export const TopicsDropdown = () => {
   const dispatch = useDispatch();
-  const [age, setAge] = React.useState('');
   const topics = useSelector(state => state.topics.topics);
   const handleChange = (event) => {
     dispatch(updateActiveTopic(event.target.value))
@@ -22,7 +21,7 @@ export const TopicsDropdown = () => {
         <Select
           labelId="demo-simple-select-autowidth-label"
           id="demo-simple-select-autowidth"
-          value={age}
+          value="Select Topic"
           onChange={handleChange}
           autoWidth
           label="Select Topic"

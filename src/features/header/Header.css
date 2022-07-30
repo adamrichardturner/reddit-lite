@@ -1,8 +1,13 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background: whitesmoke;
+}
+
+div.logo {
+    display: flex;
+    align-items: center;
 }
 
 img#logo {
@@ -12,6 +17,10 @@ img#logo {
 h1 {
     font-family: Roboto, sans-serif;  
     color: black;
+}
+
+h1, h1:active, h1:focus {
+    text-decoration: none;
 }
 
 div.topicsDropdown {

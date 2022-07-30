@@ -7,7 +7,7 @@ export const fetchPostsByTopic = createAsyncThunk(
       const response = getPosts(topic);
       return response;
     }
-)
+);
 
 const postsSlice = createSlice({
     name: "posts",
@@ -17,7 +17,7 @@ const postsSlice = createSlice({
         hasError: false
     },
     reducers: {
-        updatePosts: (state, action) => state = action.payload
+        updatePosts: (state, action) => state = action.payload,
     },
     extraReducers: {
         [fetchPostsByTopic.pending]: (state, action) => {

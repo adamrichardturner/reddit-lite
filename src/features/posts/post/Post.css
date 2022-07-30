@@ -30,8 +30,10 @@ div.likes {
 
 div.post-middle {
     display: flex;
-    padding: 0;
-    width: 75%;
+}
+
+div.post-middle p {
+    padding: 30px;
 }
 
 div.post-middle img {
@@ -47,6 +49,12 @@ div.post-bottom {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 75%;
+}
+
+div.comments {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -17,7 +17,6 @@ const App = () => {
 
   useEffect(() => {
     const data = fetchPostsByTopic(activeTopic)
-    console.log(data)
     if(data) {
       dispatch(data);
     }
@@ -26,6 +25,8 @@ const App = () => {
 
   const posts = useSelector(state => state.posts.posts)
 
+  console.log(posts);
+  
   return (
     <Router>
       <div className="App">
