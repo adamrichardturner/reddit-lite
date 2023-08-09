@@ -4,6 +4,7 @@ section.sideBar {
     flex-direction: column;
     width: 20%;
     color: white;
+    max-width: 290px;
 }
 
 section.sideBar h2 {

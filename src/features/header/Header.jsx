@@ -14,8 +14,8 @@ export const Header = () => {
     }
 
     return (
-        <>
-            <header style={Styles}>
+        <div className='header-container'>
+                <header style={Styles}>
             <Link to="/" style={{textDecoration: 'none'}}>
                     <div className="logo"
                          onClick={onLogoClick}
@@ -35,7 +35,7 @@ export const Header = () => {
                         <TopicsDropdown />
                     </div>
                 </div>  
-            </header>
-        </>
+               </header>
+        </div>
     );
 };

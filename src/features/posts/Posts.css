@@ -1,19 +1,32 @@
 section.posts {
-    background: black;
-    color: black;
-    width: 45%;
-    padding: 20px;
-    margin: 20px;
+  background: black;
+  color: black;
+  width: 66%;
+  padding: 20px;
+  margin: 20px;
+  max-width: 1100px;
 }
 
 img#loadingGif {
-    display: block;
-    margin: 50% auto;
+  display: block;
+  margin: 50% auto;
+}
+
+@media only screen and (max-width: 1600px) {
+  section.posts {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  section.posts {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-    section.posts {
-        width: 100%;
-        padding: 0px;
-    }
+  section.posts {
+    width: 100%;
+    padding: 0px;
+  }
 }
