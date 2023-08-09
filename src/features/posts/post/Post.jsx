@@ -47,8 +47,9 @@ export const Post = ({
 
   return (
     <article className='post' style={Styles}>
+    <Likes likes={likes}/>
+    <div className="post-container">
       <div className='post-top'>
-        <Likes likes={likes} />
         <a
           href={`https://reddit.com/${permalink}`}
           target='_blank'
@@ -62,8 +63,8 @@ export const Post = ({
         {content ? <p>{content}</p> : null}
       </div>
       <div className='post-bottom'>
-        <p>{author}</p>
-        <p>{timePassed(time)}</p>
+        <p className="author">{author}</p>
+        <p className='time-passed'>{timePassed(time)}</p>
         <div className='comments' onClick={handleClick}>
           <p>{numComments}</p>
           <ChatBubbleOutlineIcon />
@@ -77,6 +78,7 @@ export const Post = ({
           <p onClick={handleClick}>Close comments...</p>
         </>
       )}
+      </div>
     </article>
   )
 }

@@ -10,3 +10,7 @@ input {
     border-bottom: none !important;
     transition: none !important;
 }
+
+#outlined-basic {
+    width: 300px;
+}

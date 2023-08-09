@@ -1,115 +1,136 @@
 article.post {
-    background: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0 5% 2% 0;
-    border-radius: 4px;
-    background: #fff;
-    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
-}
-
-div.post-top {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 0 5% 2% 0;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
 div.post-top h2 {
-    text-align: left;
-    flex-basis: 75%;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-left: 20px;
+  text-align: left;
+  margin: 16px 20px 13px 13px;
+}
+
+div.post-container {
+  width: 100%;
 }
 
 div.likes {
-    flex-direction: column;
-    margin: 20px 0;
-    text-align: center;
-    width: 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+  align-self: stretch;
+  background-color: rgb(232, 232, 232);
+  border-radius: 4px 0 0 4px;
 }
 
 div.likes p {
-    margin: 0;
+  margin: 0;
 }
 
 div.post-middle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 div.post-middle p {
-    padding: 30px;
+  padding: 5px 20px 5px 13px;
 }
 
 div.post-middle img {
-    width: 75%;
-    height: auto;
-    margin-bottom: 15px;
+  width: 75%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 div.post-bottom {
-    border-top: 1.5px solid black;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 75%;
+  border-top: 1.5px solid rgb(218, 218, 218);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 13px;
+}
+
+.author {
+  min-width: 220px;
+  padding-left: 5px;
 }
 
 div.comments {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+.comments p {
+  padding-right: 5px;
 }
 
 @media only screen and (max-width: 1000px) {
-    article.post {
-        margin: 0 0 14px 0;
-        width: 100%;
-        padding: 0;
-    }
-    section.posts {
-        padding: 0px;
-        margin: 0 !important;
-    }
+  article.post {
+    margin: 0 0 14px 0;
+    width: 100%;
+    padding: 0;
+  }
+  section.posts {
+    padding: 0px;
+    margin: 0 !important;
+  }
 
-    div.post-middle img {
-        display: block;
-        width: 85%;
-        height: auto;
-        margin-bottom: 15px;
-        margin: 0 auto;
-    }
+  div.post-middle img {
+    display: block;
+    width: 85%;
+    height: auto;
+    margin-bottom: 15px;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    div.post-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  div.post-middle p {
+    font-size: 12px;
+  }
 
-    div.post-middle p {
-        font-size: 12px;
-    }
+  div.post-bottom p {
+    font-size: 12px;
+  }
 
-    div.post-bottom p {
-        margin: 5px 0px;
-    }
+  div.post-top h2 {
+    font-size: 1rem;
+    flex-shrink: 1;
+  }
+}
 
-    div.post-top h2 {
-        font-size: 1rem;
-        flex-shrink: 1;
-    }
-
-    div.post-middle p {
-        padding: 5px;
-    }
+@media only screen and (max-width: 580px) {
+  div.post-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .author {
+    margin: 10px 0 2px 5px;
+    min-width: 12px;
+    padding: 0;
+  }
+  .comments p {
+    padding-right: 5px;
+  }
+  .time-passed {
+    margin: 5px 0 10px 5px;
+  }
+  div.comments {
+    position: absolute;
+    right: 29px;
+    padding-top: 12px;
+  }
 }
