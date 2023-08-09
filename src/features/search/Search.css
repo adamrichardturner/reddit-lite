@@ -14,3 +14,10 @@ input {
 #outlined-basic {
     width: 300px;
 }
+
+@media only screen and (max-width: 860px) {
+    #outlined-basic {
+        width: 168px;
+    }
+  }
+  
